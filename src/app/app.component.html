@@ -1,0 +1,7 @@
+<div class="content" #graphContainer>
+</div>
+
+<app-upload-dialog class="dialog" [class.hidden]='!showDialog' (onClose)='onClose()' (onUploadImage)='onUploadImage($event)'></app-upload-dialog>
+
+<app-carousel-viewer class="carousel" [images]='images' (onImageChange)='onImageChange($event)'
+    (onAddImage)='onAddImage()'></app-carousel-viewer>

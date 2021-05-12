@@ -1,0 +1,6 @@
+<div class="wrapper">
+    <div class="content">
+        <img *ngFor='let item of images' [src]="item.url" (click)='changeImage(item.id)'>
+        <div class="btn-add" (click)='addImage()'></div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="header">
+    <p class="title">请上传图片</p>
+    <div class="btn-close" (click)='close()'>x</div>
+</div>
+<div class="content">
+    <input type="file" multiple (change)="onFilesChange($event)">
+</div>
+<div class="footer">
+    <button class="cancel" (click)='close()'>取消</button>
+    <button (click)='save()'>上传</button>
+</div>

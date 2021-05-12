@@ -1,0 +1,81 @@
+:host {
+    display: block;
+    overflow: hidden;
+    div.wrapper {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        div.content {
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            $imgSize: 120px;
+            $bgColor: orange;
+            // overflow: auto;
+            img {
+                width: $imgSize;
+                height: $imgSize;
+                margin-bottom: 10px;
+                cursor: pointer;
+                border: 2px solid transparent;
+    
+                &:hover {
+                    border-color: $bgColor;
+                }
+            }
+    
+            div.btn-add {
+                position: relative;
+                width: $imgSize;
+                height: $imgSize;
+                border: 2px solid #fff;
+                cursor: pointer;
+                border-radius: 4px;
+                $addSize: 6px;
+    
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    content: '';
+                    width: 70%;
+                    border-radius: 2px;
+                    height: $addSize;
+                    background-color: #fff;
+                }
+    
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    content: '';
+                    width: $addSize;
+                    border-radius: 2px;
+                    height: 70%;
+                    background-color: #fff;
+                }
+    
+                &:hover {
+                    border-color: $bgColor;
+    
+                    &::before,
+                    &::after {
+                        background-color: $bgColor;
+                    }
+                }
+            }
+        }
+    }
+
+}
