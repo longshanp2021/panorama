@@ -1,6 +1,7 @@
 :host {
     display: block;
     overflow: hidden;
+
     div.wrapper {
         position: absolute;
         display: flex;
@@ -16,6 +17,7 @@
             flex-flow: column;
             $imgSize: 120px;
             $bgColor: orange;
+
             // overflow: auto;
             img {
                 width: $imgSize;
@@ -23,12 +25,12 @@
                 margin-bottom: 10px;
                 cursor: pointer;
                 border: 2px solid transparent;
-    
+
                 &:hover {
                     border-color: $bgColor;
                 }
             }
-    
+
             div.btn-add {
                 position: relative;
                 width: $imgSize;
@@ -37,7 +39,7 @@
                 cursor: pointer;
                 border-radius: 4px;
                 $addSize: 6px;
-    
+
                 &::before {
                     position: absolute;
                     top: 0;
@@ -51,7 +53,7 @@
                     height: $addSize;
                     background-color: #fff;
                 }
-    
+
                 &::after {
                     position: absolute;
                     top: 0;
@@ -65,10 +67,10 @@
                     height: 70%;
                     background-color: #fff;
                 }
-    
+
                 &:hover {
                     border-color: $bgColor;
-    
+
                     &::before,
                     &::after {
                         background-color: $bgColor;
@@ -78,4 +80,15 @@
         }
     }
 
+    @media screen and (max-width:500px) {
+        div.wrapper {
+            div.content {
+                img,
+                div.btn-add {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
 }

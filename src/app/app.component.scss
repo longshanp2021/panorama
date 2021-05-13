@@ -28,9 +28,21 @@
         width: 500px;
         height: 300px;
         margin: auto;
+        z-index: 999999;
 
-        &.hidden{
+        &.hidden {
             display: none !important;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .carousel {
+            width: 4rem;
+        }
+
+        .dialog {
+            width: 90%;
+            height: 300px;
         }
     }
 }
